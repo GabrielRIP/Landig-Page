@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-size: 1em;
+}
+#header{
+    width: 100%;
+    background: cadetblue;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* div del logotipo */
+.logo{
+    width: 200px;
+}
+.logo #header-img{
+    width: 100%;
+    margin-bottom: -4px;
+    border-radius: 7rem;
+}
+/* div de la barra de NAV */
+#nav-bar .opp{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid rgb(8, 35, 77);
+    border-radius: 50%;
+    cursor: pointer;
+}
+#nav-bar .opp .hamburger{
+    text-align: center;
+    width: 18px;
+    height: 15px;
+    background: linear-gradient(rgb(8, 35, 77) 0%, rgb(8, 35, 77) 22%, transparent 22%, transparent 39%, rgb(8, 35, 77) 39%, rgb(8, 35, 77) 61%, transparent 61%, transparent 78%, rgb(8, 35, 77) 78%, rgb(8, 35, 77) 100%);
+}
+#nav-bar ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: .5rem;
+}
+#nav-bar ul li{
+    list-style: none;
+    cursor: pointer;
+}
+#nav-bar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+/* TODO: MENU */
+.menu {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+/* MAIN FIXME: list-img */
+.menu .media{
+    width: 80%;
+    margin: 0 auto;
+}
+.menu .youtube{
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.menu .youtube #video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* FIXME: sections */
+.box{
+    margin: 3rem auto;
+    border-radius: 8px;
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgba(233, 231, 231, 0.377);
+}
+.box .info-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box img{
+    width: 100%;
+    border-radius: 7px;
+}
+.box .info-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.box .info-text h2{
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+.box .info-text ul li{
+    list-style: none;
+    line-height: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(90, 89, 89);
+    text-align: justify;
+}
+.box .info-text .btn{
+    padding: .7rem 1rem;
+    margin-top: 1rem;
+    border-radius: 4rem;
+    border: none;
+    background: rgb(204, 50, 50);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.box .info-text .btn:focus{
+    outline: none;
+}
+
+/* TODO: Form */
+.contac-form{
+    width: 80%;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    padding: 1rem;
+    background: rgb(211, 226, 255);
+    border-radius: 8px;
+}
+.contac-form #form{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+#form .text-area{
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #0074d9;
+    border-radius: 8px;
+    height: 150px;
+    outline: none;
+}
+#form #email{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #0074d9;
+}
+#form #submit{
+    width: 100px;
+    margin: 0 auto;
+    padding: 7px;
+    border: none;
+    border-radius: 3rem;
+    background: #0074d9;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 1rem #ccc;
+    cursor: pointer;
+    outline: none;
+}
+#form #submit:hover{
+    background: #2e92e9;
+    text-shadow: 0 0 2px #000;
+    box-shadow: 0 0 5px #000;
+}
+
+/* TODO: FOOTER */
+footer{
+    background: cadetblue;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    text-shadow: 0 0 1px #000;
+}
+footer h3 a{
+    text-decoration: none;
+    color: #000;
+    text-shadow: 0 0 1px #fff;
+}
+/* botton Float */
+.other{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    bottom: 20vh;
+    right: 1rem;
+    background: transparent;
+    border: 3px solid #0074d9;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.other a .fas{
+    font-size: 1.5rem;
+    color: #0074d9;
+}
+
+
+/* TODO: las medias */
+/* FIXME:  media up 280px*/
+@media (min-width: 280px){
+    #header{
+        padding: 10px 1rem;
+    }
+    #header .logo{
+        width: 150px;
+    }
+    #nav-bar .opp{
+        display: flex;
+    }
+    #nav-bar ul{
+        display: none;
+    }
+    .menu{
+        width: 100%;
+    }
+    .box{
+        grid-template-columns: 1fr;
+        width: 95%;
+        background: rgb(235, 230, 230);
+    }
+    .contac-form{
+        width: 95%;
+    }
+    .contac-form #form #email{
+        width: 70%;
+    }
+}
+/* FIXME: media up 400px*/
+@media (min-width: 400px){
+    #header{
+        padding: 10px 2rem;
+    }
+    .box{
+        width: 90%;
+    }
+    .contac-form{
+        width: 90%;
+    }
+}
+/* FIXME: media up 750px */
+@media (min-width: 750px){
+    #nav-bar .opp{
+        display: none;
+    }
+    #nav-bar ul{
+        display: flex;
+    }
+    .menu{
+        width: 90%;
+    }
+    .menu .media{
+        max-width: 800px;
+    }
+    .box{
+        width: 80%;
+    }
+    .contac-form{
+        width: 80%;
+    }
+    #form .text-area{
+        width: 70%;
+        margin: auto;
+    }
+    .contac-form #form #email{
+        width: 40%;
+    }
+}
+/* FIXME: media up 920px */
+@media (min-width: 920px){
+    .box{
+        width: 100%;
+        max-width: 1200px;
+        grid-template-columns: 1fr 1fr;
+        background: transparent;
+    }
+    .contac-form{
+        width: 70%;
+    }
+    .other{
+        right: 1.5rem;
+    }
+}
+/* FIXME: media up 1200px */
+@media (min-width: 1200px){
+    #header{
+        justify-content: space-around;
+    }
+    .box{
+        margin: 4rem auto;
+    }
+    .contac-form{
+        background: transparent;
+        max-width: 1100px;
+    }
+    #form .text-area{
+        background: rgb(255, 243, 220);
+    }
+    .contac-form #form #email{
+        background: rgba(255, 243, 220);
+    }
+    .other{
+        right: 2.5rem;
+        width: 35px;
+        height: 35px;
+    }
+}
